@@ -106,6 +106,10 @@ function newfact() {
 <?php
 
 class Fact {
+
+  const TEST_FACT = 'bad';
+
+  // Bypass 80chars here since you can't concatenate in a static array.
   static $facts = array(
     'Once killed a bear with his bare hands.  Then he phished it.',
     'Took down a 1 million host botnet.  With a bloom filter.',
@@ -124,7 +128,7 @@ class Fact {
     'Remembers the Alamo.  He was the &lt;href /&gt;.',
     'Detects fake accounts effortlessly. By their uid.',
     'Can smell a phishing site from 10 miles away.',
-    'Wrote the source for an entire distro in the sands of Normandy.  When it washed away he didn\'t cry.',
+    'Wrote the source for an entire distro in the sands of Normandy. When it washed away he didn\'t cry.',
     '\'s mother has a tattoo.  It says "Son."',
     'Pities Mr. T for being a fool.',
     'Knows how to take square roots.  Without Newton\'s Method.',
@@ -133,7 +137,7 @@ class Fact {
     '\'s router bastardizes the internet',
     '<script>alert("Boo");</script>Just did that', // safe XSS
     '&#8220;We live in a world where there is bugs&#8221;',
-    'It depends on what the meaning of is <strong>is</strong>',
+    '<img src="secret_agent_palow.png"></img>&nbsp;Name is Palow, C. Palow',
   );
 
   public function __construct($id = null) {
@@ -141,10 +145,11 @@ class Fact {
       $this->fact = mt_rand(0, count(self::$facts) - 1);
     } else {
       $this->invariant(
-        is_numeric($id) && $id >= 0 && $id < count(self::$facts),
+        (is_numeric($id) || $id === self::TEST_FACT)
+          && $id >= 0 && $id < count(self::$facts), // works for 'bad' lolz
         'Hey that is counterfactual'
       );
-      $this->fact = (int)$id;
+      $this->fact = $id;
     }
   }
 
@@ -154,6 +159,9 @@ class Fact {
 
   public function render() {
     $fact = $this->getFact();
+    if ($fact === self::TEST_FACT) {
+      return 'tests facts to show when they\'re blocked';
+    }
     return strtolower(self::$facts[$this->getFact()]);
   }
 

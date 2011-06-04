@@ -144,7 +144,7 @@ class Fact {
     if ($id === null) {
       $this->fact = mt_rand(0, count(self::$facts) - 1);
     } else {
-      $this->invariant(
+      invariant(
         (is_numeric($id) || $id === self::TEST_FACT)
           && $id >= 0 && $id < count(self::$facts), // works for 'bad' lolz
         'Hey that is counterfactual'
@@ -164,18 +164,16 @@ class Fact {
     }
     return strtolower(self::$facts[$this->getFact()]);
   }
+}
 
-  /**
-   * We need more invariants in our code, to prevent liking fact #69.
-   * This should be a function, but facts are of course invariant, and
-   * we'll leave it at that.
-   */
-  private function invariant($cond, $format /*, varargs */) {
-    if (!$cond) {
-      // Exit ugli-ly.
-      $args = func_get_args();
-      $format_plus_varargs = array_slice($args, 1);
-      die(call_user_func_array('sprintf', $format_plus_varargs));
-    }
+/**
+ * Dies if $cond is falsey, with a message displayed to the user.
+ */
+function invariant($cond, $format /*, varargs */) {
+  if (!$cond) {
+    // Exit ugli-ly.
+    $args = func_get_args();
+    $format_plus_varargs = array_slice($args, 1);
+    die(call_user_func_array('sprintf', $format_plus_varargs));
   }
 }

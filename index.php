@@ -133,11 +133,14 @@ class Fact {
     'Pities Mr. T for being a fool.',
     'Knows how to take square roots.  Without Newton\'s Method.',
     'Can bend 4 feet of sheet metal, using only 2 pipes.  Between grep and awk.',
-    'Knows who has viewed your profile',
+    'Knows who viewed your profile',
     '\'s router bastardizes the internet',
     '<script>alert("Boo");</script>Just did that', // safe XSS
     '&#8220;We live in a world where there is bugs&#8221;',
     '<img src="secret_agent_palow.png"></img>&nbsp;Name is Palow, C. Palow',
+    'Already won all the iPad 2s',
+    'Was stuck in London and didn\'t need your help',
+    'Opened an offshore account in Nigeria just cuz',
   );
 
   public function __construct($id = null) {

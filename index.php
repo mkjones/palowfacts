@@ -177,6 +177,6 @@ function invariant($cond, $format /*, varargs */) {
     // Exit ugli-ly.
     $args = func_get_args();
     $format_plus_varargs = array_slice($args, 1);
-    die(call_user_func_array('sprintf', $format_plus_varargs));
+    die(htmlentities(call_user_func_array('sprintf', $format_plus_varargs)));
   }
 }

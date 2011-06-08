@@ -141,6 +141,8 @@ class Fact {
     'Already won all the iPad 2s',
     'Was stuck in London and didn\'t need your help',
     'Opened an offshore account in Nigeria just cuz',
+    'Accepts his own diffs',
+    'In Soviet Russia, sitevars change Chris Palow, during push',
   );
 
   public function __construct($id = null) {

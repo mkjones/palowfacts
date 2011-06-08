@@ -143,6 +143,7 @@ class Fact {
     'Opened an offshore account in Nigeria just cuz',
     'Accepts his own diffs',
     'In Soviet Russia, sitevars change Chris Palow, during push',
+    'Drives a Porsche at, or below, the speed limit',
   );
 
   public function __construct($id = null) {

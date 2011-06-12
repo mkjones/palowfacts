@@ -145,6 +145,7 @@ class Fact {
     'In Soviet Russia, sitevars change Chris Palow, during push',
     'Drives a Porsche at, or below, the speed limit',
     '\'s "People You May Know" are all real hot girls',
+    'Got Alice and Bob\'s private keys back in the 80s',
   );
 
   public function __construct($id = null) {

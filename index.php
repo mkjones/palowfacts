@@ -146,6 +146,7 @@ class Fact {
     'Drives a Porsche at, or below, the speed limit',
     '\'s "People You May Know" are all real hot girls',
     'Got Alice and Bob\'s private keys back in the 80s',
+    'Knows your secrets',
   );
 
   public function __construct($id = null) {

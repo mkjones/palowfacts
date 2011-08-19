@@ -138,7 +138,7 @@ class Fact {
     '<script>alert("Boo");</script>Just did that', // safe XSS
     '&#8220;We live in a world where there is bugs&#8221;',
     '<img src="secret_agent_palow.png"></img>&nbsp;Name is Palow, C. Palow',
-    'Can parse XML with regular expressions',
+    'Can parse HTML with regular expressions',
   );
 
   public function __construct($id = null) {

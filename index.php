@@ -146,6 +146,7 @@ class Fact {
     '\'s "People You May Know" are all real hot girls',
     'Got Alice and Bob\'s private keys back in the 80s',
     'Knows your secrets',
+    'finds your lack of faith disturbing',
   );
 
   public function __construct($id = null) {

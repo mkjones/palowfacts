@@ -137,7 +137,8 @@ class Fact {
     'Pities Mr. T for being a fool.',
     'Knows how to take square roots.  Without Newton\'s Method.',
     'Can bend 4 feet of sheet metal, using only 2 pipes.  Between grep and awk.',
-    );
+    'Never pushes to trunk.  Trunk pulls from him.',
+  );
 
   public function __construct($id = null) {
     if ($id === null) {

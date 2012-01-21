@@ -163,7 +163,7 @@ class Fact {
       $this->fact = mt_rand(0, count(self::$facts) - 1);
     } else {
       invariant(
-        (is_numeric($id) || $id === self::TEST_FACT)
+        (is_numeric_and_not_octal($id) || $id === self::TEST_FACT)
           && $id >= 0 && $id < count(self::$facts), // works for 'bad' lolz
         'Hey that is counterfactual'
       );
@@ -194,4 +194,8 @@ function invariant($cond, $format /*, varargs */) {
     $format_plus_varargs = array_slice($args, 1);
     die(htmlentities(call_user_func_array('sprintf', $format_plus_varargs)));
   }
+}
+
+function is_numeric_and_not_octal($var) {
+  return ctype_digit($var) && !preg_match('/^0\d/', $var);
 }

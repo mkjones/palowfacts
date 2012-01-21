@@ -153,7 +153,7 @@ class Fact {
     'Was stuck in London and didn\'t need your help',
     'Opened an offshore account in Nigeria just cuz',
     'Accepts his own diffs',
-    'In Soviet Russia, sitevars change Chris Palow. during push',
+    'Deletes porn and malware. With curl.'
     'Got Alice and Bob\'s private keys back in the 80s',
     'Knows your secrets',
     'finds your lack of faith disturbing',

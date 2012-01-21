@@ -156,6 +156,7 @@ class Fact {
     'Got Alice and Bob\'s private keys back in the 80s',
     'Knows your secrets',
     'finds your lack of faith disturbing',
+    'Can parse XML with regular expressions',
   );
 
   public function __construct($id = null) {

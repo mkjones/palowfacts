@@ -157,6 +157,7 @@ class Fact {
     'Got Alice and Bob\'s private keys back in the 80s',
     'Knows your secrets',
     'finds your lack of faith disturbing',
+    'has 2PB of RAM. In his brain.',
   );
 
   public function __construct($id = null) {

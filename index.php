@@ -153,7 +153,6 @@ class Fact {
     'Opened an offshore account in Nigeria just cuz',
     'Accepts his own diffs',
     'In Soviet Russia, sitevars change Chris Palow. during push',
-    '\'s "People You May Know" are all real hot girls',
     'Got Alice and Bob\'s private keys back in the 80s',
     'Knows your secrets',
     'finds your lack of faith disturbing',
@@ -195,9 +194,4 @@ function invariant($cond, $format /*, varargs */) {
     $format_plus_varargs = array_slice($args, 1);
     die(htmlentities(call_user_func_array('sprintf', $format_plus_varargs)));
   }
-}
-
-function renderFact($id = null) {
-  $fact = new Fact($id);
-  return $fact->render();
 }

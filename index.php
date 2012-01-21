@@ -55,10 +55,20 @@ body {
   margin-top:10px;
 }
 
+#hacked-by-chinese {
+  position: absolute;
+  width: 139px;
+  height: 134px;
+  background: url(hacked.png) no-repeat transparent;
+  top: 0;
+  right: 0;
+}
+
 </style>
 </head>
 
 <body>
+<div id="hacked-by-chinese"></div>
 <div id='topSpacer'></div>
 
 <div id='name'>
@@ -185,4 +195,9 @@ function invariant($cond, $format /*, varargs */) {
     $format_plus_varargs = array_slice($args, 1);
     die(htmlentities(call_user_func_array('sprintf', $format_plus_varargs)));
   }
+}
+
+function renderFact($id = null) {
+  $fact = new Fact($id);
+  return $fact->render();
 }

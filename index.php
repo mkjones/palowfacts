@@ -153,7 +153,7 @@ class Fact {
     'Was stuck in London and didn\'t need your help',
     'Opened an offshore account in Nigeria just cuz',
     'Accepts his own diffs',
-    'Deletes porn and malware. With curl.'
+    'Deletes porn and malware. With curl.',
     'Got Alice and Bob\'s private keys back in the 80s',
     'Knows your secrets',
     'finds your lack of faith disturbing',

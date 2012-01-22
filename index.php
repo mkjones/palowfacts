@@ -55,10 +55,20 @@ body {
   margin-top:10px;
 }
 
+#hacked-by-chinese {
+  position: absolute;
+  width: 139px;
+  height: 134px;
+  background: url(hacked.png) no-repeat transparent;
+  top: 0;
+  right: 0;
+}
+
 </style>
 </head>
 
 <body>
+<div id="hacked-by-chinese"></div>
 <div id='topSpacer'></div>
 
 <div id='name'>
@@ -133,12 +143,24 @@ class Fact {
     'Pities Mr. T for being a fool.',
     'Knows how to take square roots.  Without Newton\'s Method.',
     'Can bend 4 feet of sheet metal, using only 2 pipes.  Between grep and awk.',
-    'Knows who has viewed your profile',
+    'Knows who viewed your profile',
     '\'s router bastardizes the internet',
     '<script>alert("Boo");</script>Just did that', // safe XSS
     '&#8220;We live in a world where there is bugs&#8221;',
     '<img src="secret_agent_palow.png"></img>&nbsp;Name is Palow, C. Palow',
     'Can parse HTML with regular expressions',
+    'Already won all the iPad 2s',
+    'Was stuck in London and didn\'t need your help',
+    'Opened an offshore account in Nigeria just cuz',
+    'Accepts his own diffs',
+    'Deletes porn and malware. With curl.',
+    'Got Alice and Bob\'s private keys back in the 80s',
+    'Knows your secrets',
+    'finds your lack of faith disturbing',
+    'has 2PB of RAM. In his brain.',
+    'Denied your service',
+    'Is faster than <a href="http://en.wikipedia.org/wiki/%4C%4F%49%43">loic</a>. With his mouse.',
+    'Never pushes to trunk. Trunk pulls from him.',
   );
 
   public function __construct($id = null) {
@@ -146,7 +168,7 @@ class Fact {
       $this->fact = mt_rand(0, count(self::$facts) - 1);
     } else {
       invariant(
-        (is_numeric($id) || $id === self::TEST_FACT)
+        (is_numeric_and_not_octal($id) || $id === self::TEST_FACT)
           && $id >= 0 && $id < count(self::$facts), // works for 'bad' lolz
         'Hey that is counterfactual'
       );
@@ -175,6 +197,10 @@ function invariant($cond, $format /*, varargs */) {
     // Exit ugli-ly.
     $args = func_get_args();
     $format_plus_varargs = array_slice($args, 1);
-    die(call_user_func_array('sprintf', $format_plus_varargs));
+    die(htmlentities(call_user_func_array('sprintf', $format_plus_varargs)));
   }
+}
+
+function is_numeric_and_not_octal($var) {
+  return ctype_digit($var) && !preg_match('/^0\d/', $var);
 }

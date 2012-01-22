@@ -160,6 +160,7 @@ class Fact {
     'has 2PB of RAM. In his brain.',
     'Denied your service',
     'Is faster than <a href="http://en.wikipedia.org/wiki/LOIC">loic</a>. With his mouse.',
+    'Never pushes to trunk. Trunk pulls from him.',
   );
 
   public function __construct($id = null) {

@@ -159,7 +159,7 @@ class Fact {
     'finds your lack of faith disturbing',
     'has 2PB of RAM. In his brain.',
     'Denied your service',
-    'Is faster than <a href="http://en.wikipedia.org/wiki/LOIC">loic</a>. With his mouse.',
+    'Is faster than <a href="http://en.wikipedia.org/wiki/%4C%4F%49%43">loic</a>. With his mouse.',
     'Never pushes to trunk. Trunk pulls from him.',
   );
 

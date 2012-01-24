@@ -82,15 +82,17 @@ body {
 <img onclick="newfact()" src='/cpalow.jpg' />
 </div>
 <div id='likeButton'>
-<iframe src="http://www.facebook.com/widgets/like.php?href=http://<?php
-  echo UR_DOMAIN.'/'.$fact->getFact();
-?>"
-        scrolling="no" frameborder="0"
-        style="border:none; width:450px; height:80px"></iframe>
+<iframe
+  src="http://www.facebook.com/widgets/like.php?href=http://<?=
+        UR_DOMAIN.'/'.$fact->getFact();
+      ?>"
+  scrolling="no"
+  frameborder="0"
+  style="border:none; width:450px; height:80px">
+</iframe>
 </div>
-<?php if (UR_DOMAIN === 'palowfacts.com') { ?>
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? 
+var gaJsHost = (("https:" == document.location.protocol) ?
  "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost +
   "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -101,7 +103,6 @@ try {
   pageTracker._trackPageview();
 } catch(err) {}</script>
 <script>
-<?php } ?>
 function newfact() {
   if (/\d+$/.test(document.location.href)) {
     document.location = 'http://<?php echo UR_DOMAIN; ?>';

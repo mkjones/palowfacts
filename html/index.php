@@ -43,13 +43,21 @@ body {
 
 }
 
-#face {
+#faceSubscribeContainer {
  float:right;
  margin:5%;
+}
+
+#face {
  -moz-border-radius: 5px;
  -webkit-border-radius: 5px;
  border:solid #555 2px;
  cursor:pointer;
+}
+
+#subscribeButton {
+ margin-top:12px;
+ margin-left:25%;
 }
 
 #likeButton {
@@ -80,8 +88,18 @@ body {
 <div id='fact'>
 <?= $fact->render() ?>
 </div>
+<div id='faceSubscribeContainer'>
 <div id='face'>
 <img onclick="newfact()" src='cpalow.jpg' />
+</div>
+<div id='subscribeButton'>
+<iframe
+  src="//www.facebook.com/plugins/subscribe.php?href=https%3A%2F%2Fwww.facebook.com%2Fpalow&layout=button_count&colorscheme=light&font&width=120&appId=235762803115452"
+  scrolling="no"
+  frameborder="0"
+  style="border:none; overflow:hidden; width:120px;">
+</iframe>
+</div>
 </div>
 <div id='likeButton'>
 <iframe

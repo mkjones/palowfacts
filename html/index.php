@@ -74,11 +74,21 @@ body {
   right: 0;
 }
 
+#prism {
+position: absolute;
+width:180;
+height:134;
+background: url(prism.png) no-repeat transparent;
+top:0
+left:0;
+}
+
 </style>
 </head>
 
 <body>
 <div id="hacked-by-chinese"></div>
+<div id="prism"></div>
 <div id='topSpacer'></div>
 
 <div id='name'>

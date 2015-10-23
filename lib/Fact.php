@@ -51,7 +51,9 @@ class Fact {
     'Found only russian brides',
     'Totally could have phished Bruce Schneier.  But he\'s just too nice to do it.',
     'Palow has touched so many people\'s lives that the dictionary added a new word, "Palowed"',
-    'Palow generates one time passwords in his mind, finds no use for generators'
+    'Palow generates one time passwords in his mind, finds no use for generators',
+    'knows where Edward Snowden is',
+    'is creating a GUI interface using Visual Basic, to see if he can track an IP address',
   );
 
   public function __construct($id = null) {
